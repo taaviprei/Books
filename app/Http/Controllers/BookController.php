@@ -15,6 +15,7 @@ class BookController extends Controller
         $books = Book::where('release_date', '>=', $year)
         ->where('type', 'new')
         ->orderBy('title')
+        ->with()
         ->get(['title', 'release_date', 'price', 'type']);
         return $books;
     }

@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class OrderController extends Controller
 {
     public function list(){
-        $orders = Order::all();
+        $orders = Order::where('status', '!=', 'sent')->get();
         return $orders;
     }
 }
