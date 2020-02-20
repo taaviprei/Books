@@ -12,11 +12,11 @@ class BookController extends Controller
     }
 
     public function list($year){
-        $books = Book::where('release_date', '>=', $year)
+        $books = Book::where('release_date', '=', $year)
         ->where('type', 'new')
         ->orderBy('title')
-        ->with()
-        ->get(['title', 'release_date', 'price', 'type']);
+        ->with('orders')
+        ->get(['id', 'title', 'release_date', 'price', 'type']);
         return $books;
     }
 }
