@@ -22,6 +22,8 @@ Route::get('/books/{year}', 'BookController@list');
 
 Route::get('/authors', 'AuthorController@list');
 
+Route::get('/orders', 'OrderController@list');
+
 Route::get('/query1', function () {
     $books = DB::select('select * from books');
     dd($books);
