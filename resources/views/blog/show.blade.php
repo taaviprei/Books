@@ -4,27 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blog</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1>Tere tulemast!</h1>
-
-    <a href="http:/new">Lisa uus artikkel</a>
-
     <table>
         <thead>
             <tr>
                 <td>Pealkiri</td>
-                <td>Kuupäev</td>
+                <td>Sisu</td>
             </tr>
         </thead>
         <tbody>
-            @foreach($posts as $post)
-                <tr>
-                    <td><a href="/post/{{ $post->id }}">{{ $post->title }}</a></td>
-                    <td>{{ $post->created_at }}</td>
-                </tr>
-            @endforeach
+            <tr>
+                <td>{{ $post->title }}</td>
+                <td>{{ $post->body }}</td>
+            </tr>
         </tbody>
     </table>
 </body>

@@ -26,7 +26,12 @@ class BlogController extends Controller
 
         $post->save();
 
-        return view('blog.index');
+        return redirect("/");
+    }
+
+    public function show(Blog $post){
+
+        return view('blog.show', compact('post'));
     }
     
 }
