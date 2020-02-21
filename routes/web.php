@@ -13,8 +13,11 @@ use Illuminate\Support\Facades\DB;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', 'BlogController@index');
 
-Route::get('/', 'BookController@index');
+Route::get('/new', 'BlogController@create');
+
+//Route::get('/', 'BookController@index');
 
 //Route::get('/books', 'BookController@list');
 
