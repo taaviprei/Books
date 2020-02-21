@@ -17,9 +17,11 @@ Route::get('/', 'BlogController@index');
 
 Route::get('/new', 'BlogController@create');
 
-//Route::get('/', 'BookController@index');
+Route::post('/save', 'BlogController@save');
 
-//Route::get('/books', 'BookController@list');
+/*Route::get('/', 'BookController@index');
+
+Route::get('/books', 'BookController@list');
 
 Route::get('/books/{year}', 'BookController@list');
 
@@ -50,4 +52,4 @@ Route::post('/send', function (Request $request) {
 
 Route::get('/webapi', function() {
     return view('/webapi');
-});
+});*/

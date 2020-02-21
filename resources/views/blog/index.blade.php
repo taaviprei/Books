@@ -10,5 +10,22 @@
     <h1>Tere tulemast!</h1>
 
     <a href="http:/new">Lisa uus artikkel</a>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Pealkiri</td>
+                <td>Kuupäev</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($posts as $post)
+                <tr>
+                    <td>{{ $post->title }}</td>
+                    <td>{{ $post->created_at }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
 </body>
 </html>
